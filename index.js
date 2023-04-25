@@ -77,6 +77,7 @@ app.use("/", authRoutes);
 app.use("/", ToughtController.showToughts);
 
 conn
+  //.sync({ force: true })
   .sync()
   .then(() => {
     app.listen(3000);
